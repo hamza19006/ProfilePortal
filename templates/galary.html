@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+    <div class="container">
+        <a href="update/">update</a>
+        <a href="acounts/logout">Logout</a>
+        <div class="profile">
+            <img src="{{ profile.profile_image.url }}" alt="{{ profile.user.username }}'s profile image">
+            <h1>{{user.username}}</h1>
+            <p>{{user.email}}</p>
+        </div>
+        <p>{{profile.description}}</p>
+    </div>
+</body>
+</html>
